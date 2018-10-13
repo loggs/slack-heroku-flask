@@ -7,4 +7,3 @@ virtualenv==15.1.0
 Werkzeug==0.12.2
 pytest==3.4.2
 pytest-cov==2.5.1
-pytest-dependency==0.2
