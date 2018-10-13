@@ -54,15 +54,11 @@ jobs:
           path: test-reports
           destination: test-reports
 
-  deploy:
-    docker:
-      - image: circleci/python:3.6.6
-    steps:
-      - checkout
-      - run:
-          name: Deploy Master to Heroku
-          command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+  deployment:
+    staging:
+      branch: master
+      heroku:
+        appname: foo-bar-123
 
 workflows:
   version: 2
