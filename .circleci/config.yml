@@ -55,7 +55,7 @@ jobs:
           destination: test-reports
 
   deploy:
-    staging:
+    steps:
       branch: master
       heroku:
         appname: slack-heroku-flask
