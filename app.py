@@ -3,6 +3,9 @@ import os
 
 app = Flask(__name__)
 
+def get_ip(req):
+    return req.get('remote_addr', '')
+
 @app.route('/')
 def hello_world():
     return 'Your IP is: <b>{}</b>'.format(request.remote_addr)
