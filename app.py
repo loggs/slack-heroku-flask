@@ -8,7 +8,7 @@ def get_ip(req):
 
 @app.route('/')
 def hello_world():
-    return 'Your IP is: <b>{}</b>'.format(request.remote_addr)
+    return 'Your DUMB IP is: <b>{}</b>'.format(request.remote_addr)
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
